@@ -23,7 +23,7 @@ class AdminController extends Controller
       $email=$request->post('email');
       $password=$request->post('password');
 
-      $result=admin::where(['email'=>$email,'password'=>$password])->get();
+      $result=Admin::where(['email'=>$email,'password'=>$password])->get();
 
       if(isset($result['0']->id)){
           $request->session()->put('ADMIN_LOGIN',true);

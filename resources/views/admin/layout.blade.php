@@ -46,13 +46,13 @@
               <div class="container-fluid">
                   <ul class="navbar-mobile__list list-unstyled">
                     <li>
-                        <a href="dashboard">
+                        <a href="{{url('admin/dashboard')}}">
                           <i class="fas fa-tachometer-alt">
                           </i>Dashboard
                         </a>
                     </li>
                     <li>
-                        <a href="category">
+                        <a href="{{url('admin/category')}}">
                           <i class="fas fa-tachometer-alt">
                           </i>Category
                         </a>
@@ -73,16 +73,18 @@
           <div class="menu-sidebar__content js-scrollbar1">
               <nav class="navbar-sidebar">
                   <ul class="list-unstyled navbar__list">
-                      <li>
-                          <a  href="dashboard">
-                              <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-
-                      </li>
-                      <li>
-                          <a href="category">
-                              <i class="fas fa-tachometer-alt"></i>Category</a>
-
-                      </li>
+                    <li>
+                        <a href="{{url('admin/dashboard')}}">
+                          <i class="fas fa-tachometer-alt">
+                          </i>Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url('admin/category')}}">
+                          <i class="fas fa-tachometer-alt">
+                          </i>Category
+                        </a>
+                    </li>
 
                   </ul>
               </nav>
@@ -118,7 +120,7 @@
 
                                           </div>
                                           <div class="account-dropdown__footer">
-                                              <a href="logout">
+                                              <a href="{{url('admin/logout')}}">
                                                   <i class="zmdi zmdi-power"></i>Logout</a>
                                           </div>
                                       </div>

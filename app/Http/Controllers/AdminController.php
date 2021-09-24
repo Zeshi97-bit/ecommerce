@@ -8,21 +8,20 @@ use Illuminate\Support\Facades\Hash;
 
 
 class AdminController extends Controller
+
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+
     public function index(Request $request)
     {
       if($request->session()->has('ADMIN_LOGIN')){
         return redirect('admin/dashboard');
       }
       else{
-        return redirect('admin.login');
+      //  return redirect('admin.login');
       }
         return view('admin.login');
+
     }
 
 
@@ -31,7 +30,6 @@ class AdminController extends Controller
       $email=$request->post('email');
       $password=$request->post('password');
 
-    //  $result=Admin::where(['email'=>$email,'password'=>$password])->get();
       $result=Admin::where(['email'=>$email])->first();
       if($result){
         if(Hash::check($request->post('password'),$result->password)){

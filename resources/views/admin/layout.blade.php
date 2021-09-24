@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>dashboard</title>
+    <title>@yield('page_title')</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{asset('admin_assets/css/font-face.css')}}" rel="stylesheet" media="all">
@@ -57,6 +57,13 @@
                           </i>Category
                         </a>
                     </li>
+
+                    <li>
+                        <a href="{{url('admin/coupon')}}">
+                          <i class="fas fa-tachometer-alt">
+                          </i>Coupon
+                        </a>
+                    </li>
                   </ul>
               </div>
           </nav>
@@ -83,6 +90,12 @@
                         <a href="{{url('admin/category')}}">
                           <i class="fas fa-tachometer-alt">
                           </i>Category
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url('admin/coupon')}}">
+                          <i class="fas fa-tachometer-alt">
+                          </i>Coupon
                         </a>
                     </li>
 

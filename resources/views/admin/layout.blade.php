@@ -53,14 +53,14 @@
                     </li>
                     <li>
                         <a href="{{url('admin/category')}}">
-                          <i class="fas fa-tachometer-alt">
+                          <i class="fas fa-list">
                           </i>Category
                         </a>
                     </li>
 
                     <li>
                         <a href="{{url('admin/coupon')}}">
-                          <i class="fas fa-tachometer-alt">
+                          <i class="fas fa-tag">
                           </i>Coupon
                         </a>
                     </li>
@@ -80,21 +80,21 @@
           <div class="menu-sidebar__content js-scrollbar1">
               <nav class="navbar-sidebar">
                   <ul class="list-unstyled navbar__list">
-                    <li>
+                    <li class="@yield('dashboard_select')">
                         <a href="{{url('admin/dashboard')}}">
                           <i class="fas fa-tachometer-alt">
                           </i>Dashboard
                         </a>
                     </li>
-                    <li>
+                    <li class="@yield('category_select')">
                         <a href="{{url('admin/category')}}">
-                          <i class="fas fa-tachometer-alt">
+                          <i class="fas fa-list">
                           </i>Category
                         </a>
                     </li>
-                    <li>
+                    <li class="@yield('coupon_select')">
                         <a href="{{url('admin/coupon')}}">
-                          <i class="fas fa-tachometer-alt">
+                          <i class="fas fa-tag">
                           </i>Coupon
                         </a>
                     </li>

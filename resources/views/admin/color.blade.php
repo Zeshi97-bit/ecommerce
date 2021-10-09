@@ -2,7 +2,14 @@
 @section('page_title','Color')
 @section('color_select','active')
 @section('container')
+@if(session()->has('message'))
+<div class="sufee-alert alert with-close alert-success alert-dismissible fade show">
 {{session('message')}}
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">x</span>
+</button>
+</div>
+@endif
 
 <h1>Color</h1>
 <a href="{{url('admin/color/manage_color')}}">

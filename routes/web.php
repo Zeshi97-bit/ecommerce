@@ -57,6 +57,8 @@ Route::get('admin/product/manage_product/{id}',[ProductController::class,'manage
 Route::post('admin/product/manage_color_process',[ProductController::class,'manage_product_process'])->name('product.manage_product_process');
 Route::get('admin/product/delete/{id}',[ProductController::class,'delete']);
 Route::get('admin/product/status/{status}/{id}',[ProductController::class,'status']);
+Route::get('admin/product/product_attr_delete/{paid}/{pid}',[ProductController::class,'product_attr_delete']);
+
 
   Route::get('admin/logout', function () {
     session()->forget('ADMIN_LOGIN');
